@@ -27,9 +27,17 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            // 1. Ganti Nama Brand & Tambah Logo
+            ->brandName('CV Surya Fajar') 
+            ->brandLogo(asset('logo.png')) 
+            ->brandLogoHeight('3rem')
+            ->favicon(asset('logo.png'))
+            
+            // 2. Ganti Warna ke Hijau (Biar match sama logo)
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Green, 
             ])
+            
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
