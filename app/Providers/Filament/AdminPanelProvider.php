@@ -28,10 +28,9 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             // 1. Ganti Nama Brand & Tambah Logo
-            ->brandName('CV Surya Fajar') 
-            ->brandLogo(asset('logo.png')) 
+            ->brandName('PT DWIDAYA GUNA PRAKSARSA')
+            ->brandLogo(asset('images/logp dgp.png')) // Menampilkan logo di dalam admin panel
             ->brandLogoHeight('3rem')
-            ->favicon(asset('logo.png'))
             
             // 2. Ganti Warna ke Hijau (Biar match sama logo)
             ->colors([
